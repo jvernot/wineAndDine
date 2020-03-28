@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,10 +23,12 @@
         <div class="input-field col s3">
           <p>What type of cuisine are you looking for?</p>
           <i class="material-icons prefix"></i>
-          <input id="icon_prefix2" class="materialize-textarea">
+          <input id="cuisineList" id="icon_prefix2" class="materialize-textarea">
           <a class="waves-effect waves-light btn">submit</a>
           <label for="icon_prefix2"></label>
         </div>
+        
+        <div id="cuisineDiv"></div>
   
       </div>
   
@@ -46,5 +49,9 @@
 
 
 
+    <!-- jQuery JS -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Code to the JavaScript File -->
+    <script src="dineOut.js"></script>
 </body>
 </html>

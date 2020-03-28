@@ -16,3 +16,8 @@ var queryURL =
     url: queryURL,
     method: "GET"
   })
+
+// After data comes back from the request
+.then(function(response) {
+console.log(queryURL);
+console.log(response);

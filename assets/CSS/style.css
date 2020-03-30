@@ -25,3 +25,9 @@ body {
     background-color: navy;
 }
 
+.dropdown-content li > a {
+    color:navy!important
+}
+
+ 
+  

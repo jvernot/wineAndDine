@@ -1,6 +1,8 @@
 $(document).ready(function() {
     console.log("test");
-
+    
+    $('.dropdown-trigger').dropdown();
+   
     
     $("#cuisineList").on("click", function() {
         event.preventDefault();

@@ -1,15 +1,11 @@
-* {
-    
-
- 
+* {   
+    font-family: 'Raleway', sans-serif;
 }
 
 header {
     text-align: center;
     font-size: 62px;
     color: white;
-    font-family: 'Open Sans Condensed', sans-serif;
-    
 }
 
 #choice {
@@ -19,20 +15,19 @@ header {
     background-color: #e8f5e9;
     text-align: center;
     font-size: 36px;
-    font-family: 'Open Sans Condensed', sans-serif;
-
-
 }
 
 body {
     background-color: #64b5f6 ;
 }
 
-p{
-    font-family: 'Open Sans Condensed', sans-serif;
-
-}
-
 .btn {
     background-color: navy;
 }
+
+.dropdown-content li > a {
+    color:navy!important
+}
+
+ 
+  

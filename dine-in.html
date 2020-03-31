@@ -1,44 +1,60 @@
+  
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wine And Dine App</title>
+    <title>Wine And Dine - Dine In</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel = 'stylesheet' href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Muli&display=swap" rel="stylesheet">
+    <link href="./assets/CSS/materialize.min.css">
+    <link rel = 'stylesheet' href="./assets/CSS/style.css">
 </head>
 <body>
-    <div class="container">
-      <h1>Dine In</h1>
-  
+  <header>
+    <h1>
+      Dine In!
+    </h1>
+  </header>
 
-      <!-- This form will be where users input data about the movies -->
-      <form id="dine-form">
-        <label for="ingredient-input">Find Recipe</label>
-        <input type="text" id="ingredient-input"><br>
-
-        <label for="number-input">Number of Recipes to Retrieve:</label>
-        <input type="text" id="number-input"><br>
-  
-        
-  
-        <!-- Button to trigger our AJAX call -->
-        <input id="find-recipe" type="submit" value="Recipe Search">
-        <input id="clear-recipe" type="submit" value="Clear Search">
-      </form>
-  
-      <!-- Dump JSON contents in here -->
-      <div id="recipe-view"></div>
-  
+<div class="row">
+  <form class="col s12">
+    <div class="row">
       
-    </div>
-  
-    <!-- jQuery JS -->
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-  <!-- Code to the JavaScript File -->
-  <script src="recipe.js"></script>
-  </body>
+      <div class="input-field col s3">
+        <p>Enter the ingredients you have on hand!</p>
+        <i class="material-icons prefix"></i>
+        <input id="ingredient-input" class="materialize-textarea">
+        <a class="waves-effect waves-light btn">submit</a>
+        <label for="icon_prefix2"></label>
+      </div>
 
+    </div>
+
+  </form>
+
+  <div class="input-field col s3">
+    <p>How many recipes would you like to see? Select up to 10!</p>
+    <i class="material-icons prefix"></i>
+    <input type="number" id="quantity" name="quantity" min="1" max="10">
+    <a class="waves-effect waves-light btn">submit</a>
+    <label for="icon_prefix2"></label>
+  </div>
+</div>
+
+
+</body>
 </html>
 
+
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
+      <!-- Code to the JavaScript File -->
+      <script src="assets/JS/materialize.min.js"></script>
+      <script src="assets/JS/dineOut.js"></script>
+  </body>
+  </html>

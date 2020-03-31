@@ -30,6 +30,17 @@ $(document).ready(function() {
             .then(function(response) {
                 console.log(response)
 
+                var cuisineArray = response.cuisines;
+
+                console.log(cuisineArray);
+
+                for (var i = 0; i < cuisineArray.length; i++) {
+
+                $("#dropdown1").append("<li><a href=#!>" + cuisineArray[i].cuisine.cuisine_name + "</a></li>");
+                $("#dropdown1").append("<li class='divider' tabindex='-1'></li>");
+
+
+                }
             })
 
 

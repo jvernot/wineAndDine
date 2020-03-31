@@ -34,22 +34,31 @@ $(document).ready(function() {
 
                 console.log(cuisineArray);
 
+                
                 for (var i = 0; i < cuisineArray.length; i++) {
-
-                $("#dropdown1").append("<li><a href=#!>" + cuisineArray[i].cuisine.cuisine_name + "</a></li>");
-                $("#dropdown1").append("<li class='divider' tabindex='-1'></li>");
-
-
-                }
+                    
+                    // $("#dropdown1").append("<li><a data-ID=" + cuisineArray[i].cuisine.cuisine_id + "href=#!>" + cuisineArray[i].cuisine.cuisine_name + "</a></li>");
+                    $("#dropdown1").append(`<li><a data-id=${cuisineArray[i].cuisine.cuisine_id} href=#!> ${cuisineArray[i].cuisine.cuisine_name} </a></li>`)
+                    $("#dropdown1").append("<li class='divider' tabindex='-1'></li>");
+                    
+                };
+            
             })
-
-
+            
         }
-
 
     })
 
+    $("#dropdown1").on("click", function(event) {
+        console.log("click");
 
+        console.log($(event.target));
+
+        var cuisineId = $(event.target).attr("data-id");
+
+        console.log(cuisineId);
+
+    })
 
     
 

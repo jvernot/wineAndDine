@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wine & Dine - Dine In</title>
+    <title>Wine And Dine - Dine Out</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Muli&display=swap" rel="stylesheet">
-    <link rel = 'stylesheet' href="style.css">
+    <link href="./assets/CSS/materialize.min.css">
+    <link rel = 'stylesheet' href="./assets/CSS/style.css">
 </head>
 <body>
   <header>
@@ -23,7 +25,7 @@
       <div class="input-field col s3">
         <p>Enter the ingredients you have on hand!</p>
         <i class="material-icons prefix"></i>
-        <input id="icon_prefix2" class="materialize-textarea">
+        <input id="ingredient-input" class="materialize-textarea">
         <a class="waves-effect waves-light btn">submit</a>
         <label for="icon_prefix2"></label>
       </div>
@@ -41,10 +43,15 @@
   </div>
 </div>
 
+<div id="revipe-view">
+</div>
 
-
-
-
-
-</body>
-</html>
+    <!-- jQuery JS -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
+      <!-- Code to the JavaScript File -->
+      <script src="assets/JS/materialize.min.js"></script>
+      <script src="assets/JS/recipe.js"></script>
+  </body>
+  </html>

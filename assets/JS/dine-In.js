@@ -1,7 +1,6 @@
 $(document).ready(function() {
   console.log("ready!");
 
-
   // On-click when user enters in the ingredients they have on hand 
   $("#ingredient-input").on("click", function(event) {
   event.preventDefault();
@@ -31,6 +30,7 @@ $(document).ready(function() {
        
     }) // End of then response
   }) //  End of Ingredient-input on click
+
 }); // Final closing tag
 
 

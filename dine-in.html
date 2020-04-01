@@ -7,7 +7,8 @@
     <title>Wine And Dine - Dine Out</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Muli&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+
     <link href="./assets/CSS/materialize.min.css">
     <link rel = 'stylesheet' href="./assets/CSS/style.css">
 </head>
@@ -18,15 +19,20 @@
     </h1>
   </header>
 
+  <p align="right">
+    <a class="waves-effect waves-light btn"  href='index.html'>Start Over</a>
+  </p>
+  
+
 <div class="row">
   <form class="col s12">
     <div class="row">
       
-      <div class="input-field col s3">
+      <div class="input-field col s3" id = 'ingredients-had'>
         <p>Enter the ingredients you have on hand!</p>
         <i class="material-icons prefix"></i>
-        <input id="icon_prefix2" class="materialize-textarea">
-        <a class="waves-effect waves-light btn" id="ingredient-input">submit</a>
+        <input id="ingredient-input" class="materialize-textarea">
+        <a class="waves-effect waves-light btn">submit</a>
         <label for="icon_prefix2"></label>
       </div>
 
@@ -43,8 +49,14 @@
   </div>
 </div>
 
+
 <div id="recipe-view">
 </div>
+
+<script src="assets/JS/materialize.min.js"></script>
+<script src="assets/JS/recipe.js"></script>
+</body>
+</html>
 
     <!-- jQuery JS -->
     <script src="https://code.jquery.com/jquery.js"></script>

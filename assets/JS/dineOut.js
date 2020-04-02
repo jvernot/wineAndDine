@@ -9,7 +9,6 @@ $(document).ready(function() {
     $('.dropdown-trigger').dropdown();
 
 
-
     $("#submit1").on("click", function(event) {
         event.preventDefault();
 
@@ -117,7 +116,7 @@ $(document).ready(function() {
         
 
 
-        var queryUrl3 = "https://developers.zomato.com/api/v2.1/search?entity_id=" + locationID + "&entity_type=city&count=10&radius=" + radius + "&cuisines=" + cuisineID;
+        var queryUrl3 = "https://developers.zomato.com/api/v2.1/search?entity_id=" + locationID + "&entity_type=city&count=10&radius=" + radius + "&cuisines=" + cuisineID + "&sort=rating&order=desc";
     
         $.ajax({
             url: queryUrl3,

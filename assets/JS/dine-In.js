@@ -49,3 +49,5 @@ $(document).ready(function() {
     }) // End of then response
   }) //  End of Ingredient-input on click
 }); // Final closing tag
+
+

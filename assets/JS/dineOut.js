@@ -1,7 +1,13 @@
 $(document).ready(function() {
     console.log("test");
     
+    var locationID = 0;
+    var radius = 0;
+    var cuisineID = 0;
+
+
     $('.dropdown-trigger').dropdown();
+
 
     $("#submit1").on("click", function(event) {
         event.preventDefault();
@@ -51,7 +57,7 @@ $(document).ready(function() {
         $('#locationBtn').text(choice);
         
         //getting the cuisine ID of the choice for in the next API call
-        var locationID = $(event.target).attr("data-id");
+        locationID = $(event.target).attr("data-id");
         console.log(locationID);
 
         var queryUrl2 = "https://developers.zomato.com/api/v2.1/cuisines?city_id=" + locationID;
@@ -86,7 +92,7 @@ $(document).ready(function() {
         console.log("click");
         console.log($(event.target));
 
-        var cuisineID = $(event.target).attr("data-id");
+        cuisineID = $(event.target).attr("data-id");
         console.log(cuisineID);
 
         
@@ -98,23 +104,19 @@ $(document).ready(function() {
     })
     
 
-    $(".waves-effect").on("click", function(event) {
-        event.preventDefault();        
-
-        var radius = $("#quantity").val();
-        console.log(radius);
-    })
-
 
     
-    $("#radiusSubmit").on("click", function() {
+    $("#radiusSubmit").on("click", function(event) {
+        event.preventDefault;
 
-        var locationID = 1120;
-        var radius = 5.0;
-        cuisineChoice = 193;
+        console.log("New test: ", cuisineID);
+
+        radius = $("#quantity").val();
+
+        
 
 
-        var queryUrl3 = "https://developers.zomato.com/api/v2.1/search?entity_id=" + locationID + "&entity_type=city&count=10&radius=" + radius + "&cuisines=" + cuisineChoice;
+        var queryUrl3 = "https://developers.zomato.com/api/v2.1/search?entity_id=" + locationID + "&entity_type=city&count=10&radius=" + radius + "&cuisines=" + cuisineID + "&sort=rating&order=desc";
     
         $.ajax({
             url: queryUrl3,
@@ -129,7 +131,20 @@ $(document).ready(function() {
             console.log(restaurantArray);
 
             for (var i = 0; i < restaurantArray.length; i++) {
-                $("#restaurantResults").append("<p>" + restaurantArray[i].restaurant.name + "</p>");
+                $("#restaurantResults").append(
+
+               "<div class='row'><div class='col s12 m6'><div class='card blue-grey darken-1'><div class='card-content white-text'><span class='card-title'>"
+               //card title
+                + response.restaurants[i].restaurant.name + " | " + response.restaurants[i].restaurant.location.locality 
+                //card body elements
+                + "</span><p>User Rating (Out of 5): "
+                + response.restaurants[i].restaurant.user_rating.aggregate_rating
+                + " " + response.restaurants[i].restaurant.user_rating.rating_text
+                + " (" + response.restaurants[i].restaurant.user_rating.votes + " votes)</p>"
+                + "<p> Average Price for Two: $" + response.restaurants[i].restaurant.average_cost_for_two + "</p>"
+                //card link
+                + "</div><div class='card-action'><a target='_blank' href="
+                + response.restaurants[i].restaurant.url + ">Check out the restaurant page!</a></div></div></div></div>");
             }
     
         })

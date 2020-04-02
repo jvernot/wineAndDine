@@ -11,42 +11,55 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel = 'stylesheet' href="./assets/CSS/style.css">
 </head>
+
 <body>
-  <header>
     <p class = "right">
       <a class="waves-effect waves-light btn" href='index.html'><i class="material-icons">undo</i>Start Over</a>
-      </p>
-    <h1>Dine Out!</h1> 
-  </header>
-
- 
-
+    </p>
+    <h1 class = "center white-text" >Dine Out!</h1> 
+  
   <main>
    <div class="container">
-      <div class="row">
-        <div class="input-field col s12">
-          <p id = "restaurant-location">Where are you looking for restaurants?</p>
-            <input class = "center-align" placeholder="Enter City Here" id="location" type="text" class="validate">
-            <a id="submit1" class="waves-effect waves-light btn" class = "center-align">submit</a>  
-        </div>
+    <div class="card medium">
+      <div class="card-image">
+        <img class="responsive-img" src="https://cdn.asiatatler.com/asiatatler/i/hk/2019/11/11160001-fb-rest-images-5000x33007_cover_2000x1320.jpg">
+        <span class="card-title">Testing</span>
       </div>
-      
-      <div class="row">
-        <div id="locationDrop">
-          <!-- Dropdown Trigger -->
-          <a id="locationBtn" class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose your city</a>
-          <!-- Dropdown Structure -->
+      <div class="card-content">
+        <p id = "restaurant-location">Where are you looking for restaurants?</p>
+        <div class="input-field">
+          <input id="location" type="text" class="validate">
+          <label class = "center" for="city">Your City Here</label>
+        </div>
+      </div> 
+    </div>
+    
+
+    <p class="center">
+      <a id="submit1" class="waves-effect waves-light btn">submit</a>  
+      </p>
+  
+
+    <div class="row">
+      <div id="locationDrop">
+        <!-- Dropdown Trigger -->
+        <p class = "center">
+        <a id="locationBtn" class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose your city</a>
+        </p>
+        <!-- Dropdown Structure -->
           <ul id='dropdown1' class='dropdown-content'>
             <li class="divider" tabindex="-1"></li>
           </ul>
-          <br><br>  
-        </div>
+        <br><br>  
       </div>
+    </div>
 
      <div class="row">
         <div id="cuisineDrop">
           <!-- Dropdown Trigger -->
+          <p class = "center">
           <a id="cuisineBtn" class='dropdown-trigger btn' href='#' data-target='dropdown2'>Choose your Restaurant</a>
+          </p>
           <!-- Dropdown Structure -->
           <ul id='dropdown2' class='dropdown-content'>
             <li class="divider" tabindex="-1"></li>
@@ -59,7 +72,9 @@
         <p id = "radius"> What radius would you like to view restaurants?</p>
         <i class="material-icons prefix"></i>
         <input type="number" id="quantity" name="quantity" min="1" max="25">
+        <p class="center">
         <a id="radiusSubmit" class="waves-effect waves-light btn">submit</a>
+        </p>
         <label for="icon_prefix2"></label>
       </div>
     </div>
@@ -68,6 +83,7 @@
 
   <div id="restaurantResults">
     
+  </div>
   </div>
   
 

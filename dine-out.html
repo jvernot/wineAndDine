@@ -13,89 +13,64 @@
 </head>
 <body>
   <header>
-    <h1>
-      Dine Out!
-    </h1> 
+      <a class="waves-effect waves-light btn"  href='index.html'>Start Over</a>
+    <h1>Dine Out!</h1> 
   </header>
 
-
+ 
 
   <main>
-    <p align="right">
-      <a class="waves-effect waves-light btn"  href='index.html'>Start Over</a>
-    </p>
+   <div class="container">
+      <div class="row">
+        <div class="input-field col s12">
+          <p id = "restaurant-location">Where are you looking for restaurants?</p>
+            <input class = "center-align" placeholder="Enter City Here" id="location" type="text" class="validate">
+            <a id="submit1" class="waves-effect waves-light btn" class = "center-align">submit</a>  
+        </div>
+      </div>
+      
+      <div class="row">
+        <div id="locationDrop">
+          <!-- Dropdown Trigger -->
+          <a id="locationBtn" class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose your city</a>
+          <!-- Dropdown Structure -->
+          <ul id='dropdown1' class='dropdown-content'>
+            <li class="divider" tabindex="-1"></li>
+          </ul>
+          <br><br>  
+        </div>
+      </div>
 
-
-    <div class="input-field col s6">
-        <input placeholder="Enter City Here" id="location" type="text" class="validate">
-        <label for="first_name">Where are you looking for restaurants?</label>
-        <a id="submit1" class="waves-effect waves-light btn">submit</a>
-    </div>
-
-
-    <div id="locationDrop">
-     <!-- Dropdown Trigger -->
-    <a id="locationBtn" class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
-
-    <!-- Dropdown Structure -->
-    <ul id='dropdown1' class='dropdown-content'>
-      <li class="divider" tabindex="-1"></li>
-    </ul>
-    </div>
-
-    <br><br>
-
-    <div id="cuisineDrop">
-    <!-- Dropdown Trigger -->
-    <a id="cuisineBtn" class='dropdown-trigger btn' href='#' data-target='dropdown2'>Drop Me!</a>
-
-    <!-- Dropdown Structure -->
-    <ul id='dropdown2' class='dropdown-content'>
-        <li class="divider" tabindex="-1"></li>
-    </ul>
+     <div class="row">
+        <div id="cuisineDrop">
+          <!-- Dropdown Trigger -->
+          <a id="cuisineBtn" class='dropdown-trigger btn' href='#' data-target='dropdown2'>Choose your Restaurant</a>
+          <!-- Dropdown Structure -->
+          <ul id='dropdown2' class='dropdown-content'>
+            <li class="divider" tabindex="-1"></li>
+          </ul>
+        </div>
+     </div>
+  
+    <div class="row">
+      <div class="input-field col s12">
+        <p id = "radius"> What radius would you like to view restaurants?</p>
+        <i class="material-icons prefix"></i>
+        <input type="number" id="quantity" name="quantity" min="1" max="25">
+        <a id="radiusSubmit" class="waves-effect waves-light btn">submit</a>
+        <label for="icon_prefix2"></label>
+      </div>
     </div>
     
-    
-
-  
-       
+  <div id="restaurantResults"></div>
 
 
-
-
-
-
-  
-
-  
-    <div class="input-field col s3">
-      <p>What radius would you like to view restaurants?</p>
-      <i class="material-icons prefix"></i>
-      <input type="number" id="quantity" name="quantity" min="1" max="25">
-      <a id="radiusSubmit" class="waves-effect waves-light btn">submit</a>
-      <label for="icon_prefix2"></label>
-    </div>
-  </div>
-
-  <br><br>
-
-  <div id="restaurantResults">
-
-  </div>
-  
-
-
-
-
-
-
-    <!-- jQuery JS -->
+  <!-- jQuery JS -->
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <!-- Code to the JavaScript File -->
-    <script src="./assets/JS/materialize.min.js"></script>
-    <script src="./assets/JS/dineOut.js"></script>
+ <!-- Code to the JavaScript File -->
+  <script src="./assets/JS/materialize.min.js"></script>
+  <script src="./assets/JS/dineOut.js"></script>
 
   </main>
 </body>

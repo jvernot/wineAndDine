@@ -7,108 +7,65 @@
     <title>Wine And Dine - Dine Out</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
-<<<<<<< HEAD
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Muli&display=swap" rel="stylesheet">
-<<<<<<< HEAD
-    <link rel = 'stylesheet' href="style.css">
-=======
-=======
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
->>>>>>> 2a7da0cc3c5d62a0410d5c8f9a973fd06e9ba74f
     <link href="./assets/CSS/materialize.min.css">
     <link rel = 'stylesheet' href="./assets/CSS/style.css">
->>>>>>> 3e3693a1002b5484933acc68ba0bae074c60e683
 </head>
 <body>
   <header>
-    <h1>
-      Dine Out!
-    </h1> 
+      <a class="waves-effect waves-light btn"  href='index.html'>Start Over</a>
+    <h1>Dine Out!</h1> 
   </header>
-<<<<<<< HEAD
-  <div class="row">
-    <form class="col s12">
-      <div class="row">
-        
-        <div class="input-field col s3">
-          <p>What type of cuisine are you looking for?</p>
-          <i class="material-icons prefix"></i>
-          <input id="cuisineList" id="icon_prefix2" class="materialize-textarea">
-          <a class="waves-effect waves-light btn">submit</a>
-          <label for="icon_prefix2"></label>
-        </div>
-        
-        <div id="cuisineDiv"></div>
-  
-      </div>
-  
-    </form>
-=======
 
-
+ 
 
   <main>
-    <p align="right">
-      <a class="waves-effect waves-light btn"  href='index.html'>Start Over</a>
-    </p>
+   <div class="container">
+      <div class="row">
+        <div class="input-field col s12">
+          <p id = "restaurant-location">Where are you looking for restaurants?</p>
+            <input class = "center-align" placeholder="Enter City Here" id="location" type="text" class="validate">
+            <a id="submit1" class="waves-effect waves-light btn" class = "center-align">submit</a>  
+        </div>
+      </div>
+      
+      <div class="row">
+        <div id="locationDrop">
+          <!-- Dropdown Trigger -->
+          <a id="locationBtn" class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose your city</a>
+          <!-- Dropdown Structure -->
+          <ul id='dropdown1' class='dropdown-content'>
+            <li class="divider" tabindex="-1"></li>
+          </ul>
+          <br><br>  
+        </div>
+      </div>
 
-
-    <div class="input-field col s6">
-        <input placeholder="Enter City Here" id="location" type="text" class="validate">
-        <label for="first_name">Where are you looking for restaurants?</label>
-        <a id="submit1" class="waves-effect waves-light btn">submit</a>
-    </div>
-
-
-    <div id="locationDrop">
-     <!-- Dropdown Trigger -->
-    <a id="locationBtn" class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
-
-    <!-- Dropdown Structure -->
-    <ul id='dropdown1' class='dropdown-content'>
-      <li class="divider" tabindex="-1"></li>
-    </ul>
-    </div>
-
-    <br><br>
-
-    <div id="cuisineDrop">
-    <!-- Dropdown Trigger -->
-    <a id="cuisineBtn" class='dropdown-trigger btn' href='#' data-target='dropdown2'>Drop Me!</a>
-
-    <!-- Dropdown Structure -->
-    <ul id='dropdown2' class='dropdown-content'>
-        <li class="divider" tabindex="-1"></li>
-    </ul>
-    </div>
-    
-    
-
+     <div class="row">
+        <div id="cuisineDrop">
+          <!-- Dropdown Trigger -->
+          <a id="cuisineBtn" class='dropdown-trigger btn' href='#' data-target='dropdown2'>Choose your Restaurant</a>
+          <!-- Dropdown Structure -->
+          <ul id='dropdown2' class='dropdown-content'>
+            <li class="divider" tabindex="-1"></li>
+          </ul>
+        </div>
+     </div>
   
-       
-
-
-
-
-
-
-  
-
->>>>>>> 3e3693a1002b5484933acc68ba0bae074c60e683
-  
-    <div class="input-field col s3">
-      <p>What radius would you like to view restaurants?</p>
-      <i class="material-icons prefix"></i>
-      <input type="number" id="quantity" name="quantity" min="1" max="25">
-      <a id="radiusSubmit" class="waves-effect waves-light btn">submit</a>
-      <label for="icon_prefix2"></label>
+    <div class="row">
+      <div class="input-field col s12">
+        <p id = "radius"> What radius would you like to view restaurants?</p>
+        <i class="material-icons prefix"></i>
+        <input type="number" id="quantity" name="quantity" min="1" max="25">
+        <a id="radiusSubmit" class="waves-effect waves-light btn">submit</a>
+        <label for="icon_prefix2"></label>
+      </div>
     </div>
-  </div>
 
   <br><br>
 
   <div id="restaurantResults">
-
+    
   </div>
   
 
@@ -116,25 +73,13 @@
 
 
 
-
-    <!-- jQuery JS -->
+  <!-- jQuery JS -->
   <script src="https://code.jquery.com/jquery.js"></script>
-<<<<<<< HEAD
-    <!-- Code to the JavaScript File -->
-    <script src="dineOut.js"></script>
-=======
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-    <!-- Code to the JavaScript File -->
-<<<<<<< HEAD
-    <script src="assets/JS/materialize.min.js"></script>
-    <script src="assets/JS/dineOut.js"></script>
->>>>>>> 3e3693a1002b5484933acc68ba0bae074c60e683
-=======
-    <script src="./assets/JS/materialize.min.js"></script>
-    <script src="./assets/JS/dineOut.js"></script>
+ <!-- Code to the JavaScript File -->
+  <script src="./assets/JS/materialize.min.js"></script>
+  <script src="./assets/JS/dineOut.js"></script>
 
   </main>
->>>>>>> 2a7da0cc3c5d62a0410d5c8f9a973fd06e9ba74f
 </body>
 </html>

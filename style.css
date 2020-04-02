@@ -16,7 +16,6 @@ header {
     margin: auto;
     width: 50%;
     padding: 10px;
-    background-color: #e8f5e9;
     text-align: center;
     font-size: 36px;
     font-family: 'Open Sans Condensed', sans-serif;
@@ -36,3 +35,4 @@ p{
 .btn {
     background-color: navy;
 }
+

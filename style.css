@@ -1,15 +1,11 @@
 * {
-    
-
- 
+    font-family: 'Open Sans Condensed', sans-serif;
 }
 
-header {
+/* header {
     text-align: center;
     font-size: 62px;
     color: white;
-    font-family: 'Open Sans Condensed', sans-serif;
-    
 }
 
 #choice {
@@ -18,18 +14,10 @@ header {
     padding: 10px;
     text-align: center;
     font-size: 36px;
-    font-family: 'Open Sans Condensed', sans-serif;
-
-
 }
 
 body {
     background-color: #64b5f6 ;
-}
-
-p{
-    font-family: 'Open Sans Condensed', sans-serif;
-
 }
 
 .btn {
@@ -38,5 +26,5 @@ p{
 
 #location {
     width: 50%;
-}
+} */
 

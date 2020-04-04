@@ -41,6 +41,8 @@ $(document).ready(function() {
             
         })
 
+        $('#locationDrop').removeClass('hide');
+
     })
    
     
@@ -49,6 +51,8 @@ $(document).ready(function() {
     $("#dropdown1").on("click", function(event) {
         console.log("click");
         console.log($(event.target));
+
+        $('#cuisineDrop').removeClass('hide');
 
         
         // getting the cuisine the user chose and changing the button text to it
@@ -86,6 +90,8 @@ $(document).ready(function() {
         })
 
         
+
+        
     })
     
     $("#dropdown2").on("click", function(event) {
@@ -101,6 +107,7 @@ $(document).ready(function() {
         console.log(cuisineChoice);
         $('#cuisineBtn').text(cuisineChoice);
     
+        $('#radiusQuestion').removeClass('hide');
     })
     
 

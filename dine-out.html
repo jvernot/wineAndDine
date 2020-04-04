@@ -38,7 +38,7 @@
     </p>
   
     <div class="row">
-      <div id="locationDrop">
+      <div id="locationDrop" class = "hide">
         <!-- Dropdown Trigger -->
         <p class = "center">
         <a id="locationBtn" class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose your city</a>
@@ -51,10 +51,10 @@
     </div>
 
      <div class="row">
-        <div id="cuisineDrop">
+        <div id="cuisineDrop" class = "hide">
           <!-- Dropdown Trigger -->
           <p class = "center">
-          <a id="cuisineBtn" class='dropdown-trigger btn' href='#' data-target='dropdown2'>Choose your Restaurant</a>
+          <a id="cuisineBtn" class='dropdown-trigger btn' href='#' data-target='dropdown2'>Choose your type of cuisine</a>
           </p>
           <!-- Dropdown Structure -->
           <ul id='dropdown2' class='dropdown-content'>
@@ -64,7 +64,7 @@
      </div>
   
     <div class="row">
-      <div class="input-field col s12">
+      <div class="input-field col s12 hide" id = "radiusQuestion">
         <p id = "radius"> What radius would you like to view restaurants?</p>
         <i class="material-icons prefix"></i>
         <input type="number" id="quantity" name="quantity" min="1" max="25">

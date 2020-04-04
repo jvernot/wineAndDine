@@ -11,6 +11,29 @@ $(document).ready(function() {
 
     $("#submit1").on("click", function(event) {
         event.preventDefault();
+        searchCities();
+    })
+
+    $("#dropdown1").on("click", function(event) {
+        event.preventDefault();
+        console.log("click");
+        console.log($(event.target));
+        cuisineSearch();
+    })
+
+    $("#dropdown2").on("click", function(event) {
+        event.preventDefault();
+        console.log("click");
+        console.log($(event.target));
+        getCuisines();
+    })
+
+    $("#radiusSubmit").on("click", function(event) {
+        event.preventDefault();
+        restaurantSearch();
+    })
+
+    function searchCities() {
 
         var location = $("#location").val();
 
@@ -37,16 +60,15 @@ $(document).ready(function() {
                 $("#dropdown1").append(`<li><a data-id=${locationsArray[i].entity_id} href=#!> ${locationsArray[i].title} </a></li>`)
                 $("#dropdown1").append("<li class='divider' tabindex='-1'></li>");
                 
+              
             };
             
         })
+      $('#locationDrop').removeClass('hide');  
+    }
 
-        $('#locationDrop').removeClass('hide');
 
-    })
-   
-    
-
+  function cuisineSearch() {
 
     $("#dropdown1").on("click", function(event) {
         console.log("click");
@@ -54,16 +76,17 @@ $(document).ready(function() {
 
         $('#cuisineDrop').removeClass('hide');
 
+
         
-        // getting the cuisine the user chose and changing the button text to it
+        // getting the location the user chose and changing the button text to it
         var choice = $(event.target).text();
         console.log(choice);
         $('#locationBtn').text(choice);
         
-        //getting the cuisine ID of the choice for in the next API call
+        //getting the location ID of the choice for the next API call and setting the cuisine choices in the drop down
         locationID = $(event.target).attr("data-id");
         console.log(locationID);
-
+    
         var queryUrl2 = "https://developers.zomato.com/api/v2.1/cuisines?city_id=" + locationID;
             
         $.ajax({
@@ -74,11 +97,11 @@ $(document).ready(function() {
     
         .then(function(response) {
             console.log(response)
-
+    
             var cuisineArray = response.cuisines;
-
+    
             console.log(cuisineArray);
-
+    
             
             for (var i = 0; i < cuisineArray.length; i++) {
                 
@@ -88,11 +111,11 @@ $(document).ready(function() {
             };
         
         })
+    }
 
-        
 
-        
-    })
+    function getCuisines() {
+
     
     $("#dropdown2").on("click", function(event) {
         console.log("click");
@@ -100,28 +123,24 @@ $(document).ready(function() {
 
         cuisineID = $(event.target).attr("data-id");
         console.log(cuisineID);
-
+    
         
         // getting the cuisine the user chose and changing the button text to it
         var cuisineChoice = $(event.target).text();
         console.log(cuisineChoice);
         $('#cuisineBtn').text(cuisineChoice);
+    }
     
         $('#radiusQuestion').removeClass('hide');
-    })
+  })
     
 
-
     
-    $("#radiusSubmit").on("click", function(event) {
-        event.preventDefault;
+    function restaurantSearch() {
 
         console.log("New test: ", cuisineID);
-
+    
         radius = $("#quantity").val();
-
-        
-
 
         var queryUrl3 = "https://developers.zomato.com/api/v2.1/search?entity_id=" + locationID + "&entity_type=city&count=10&radius=" + radius + "&cuisines=" + cuisineID + "&sort=rating&order=desc";
     
@@ -133,32 +152,31 @@ $(document).ready(function() {
         
         .then(function(response) {
             console.log(response);
-
+    
             restaurantArray = response.restaurants;
             console.log(restaurantArray);
-
+    
             for (var i = 0; i < restaurantArray.length; i++) {
                 $("#restaurantResults").append(
-
-               "<div class='row'><div class='col s12 m6'><div class='card blue-grey darken-1'><div class='card-content white-text'><span class='card-title'>"
-               //card title
+    
+                "<div class='row'><div class='col s12 m6'><div class='card blue-grey darken-1'><div class='card-content white-text'><span class='card-title'>"
+                //card title
                 + response.restaurants[i].restaurant.name + " | " + response.restaurants[i].restaurant.location.locality 
                 //card body elements
-                + "</span><p>User Rating (Out of 5): "
+                + "</span><p>" + response.restaurants[i].restaurant.location.address + "</p>"
+                + "<p>User Rating (Out of 5): "
                 + response.restaurants[i].restaurant.user_rating.aggregate_rating
                 + " " + response.restaurants[i].restaurant.user_rating.rating_text
                 + " (" + response.restaurants[i].restaurant.user_rating.votes + " votes)</p>"
                 + "<p> Average Price for Two: $" + response.restaurants[i].restaurant.average_cost_for_two + "</p>"
+                + "<p>" + response.restaurants[i].restaurant.phone_numbers + "</p>"
                 //card link
                 + "</div><div class='card-action'><a target='_blank' href="
                 + response.restaurants[i].restaurant.url + ">Check out the restaurant page!</a></div></div></div></div>");
             }
     
         })
-    })
-    
-
-
+    }
 
 
 

@@ -60,23 +60,15 @@ $(document).ready(function() {
                 $("#dropdown1").append(`<li><a data-id=${locationsArray[i].entity_id} href=#!> ${locationsArray[i].title} </a></li>`)
                 $("#dropdown1").append("<li class='divider' tabindex='-1'></li>");
                 
-              
             };
             
         })
-      $('#locationDrop').removeClass('hide');  
+
+        $('#locationDrop').removeClass('hide');
     }
 
 
-  function cuisineSearch() {
-
-    $("#dropdown1").on("click", function(event) {
-        console.log("click");
-        console.log($(event.target));
-
-        $('#cuisineDrop').removeClass('hide');
-
-
+    function cuisineSearch() {
         
         // getting the location the user chose and changing the button text to it
         var choice = $(event.target).text();
@@ -111,15 +103,12 @@ $(document).ready(function() {
             };
         
         })
+
+        $('#cuisineDrop').removeClass('hide');
     }
 
 
     function getCuisines() {
-
-    
-    $("#dropdown2").on("click", function(event) {
-        console.log("click");
-        console.log($(event.target));
 
         cuisineID = $(event.target).attr("data-id");
         console.log(cuisineID);
@@ -129,12 +118,10 @@ $(document).ready(function() {
         var cuisineChoice = $(event.target).text();
         console.log(cuisineChoice);
         $('#cuisineBtn').text(cuisineChoice);
+
+        $('#radiusQuestion').removeClass('hide');
     }
     
-        $('#radiusQuestion').removeClass('hide');
-  })
-    
-
     
     function restaurantSearch() {
 

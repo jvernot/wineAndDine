@@ -1,6 +1,8 @@
+// Initalizing JS
 $(document).ready(function() {
   console.log("ready!");
 
+  // Global variables
   var recipeInput="";
   var queryURL="";
 
@@ -36,17 +38,34 @@ $(document).ready(function() {
         console.log(response[0].title);
         console.log(queryURL);
 
-      // Prepending the image to the page  
-   
-       $("#recipe-view").append(
-       
-       //card title
-       "<div class='row'><div class='col s12 m6'><div class='card blue-grey darken-1'><div class='card-content white-text'><span class='card-title'>"
-       + response[0].title);
+      //var recipeImage 
+      var recipeURL = "https://spoonacular.com/recipeImages/" + response[0].id + "-240x150." +  response[0].imageType;
+      console.log("recipe picture", recipeURL);
+        
+        // Loop through and build elements for the defined number of recipes
+        for (var i = 0; i < response.length; i++) {
+        console.log("response before append", response);
 
+        // Increase the recipeCount (track recipe # - starting at 1)
+        var recipeCount = i + 1;
 
+        $("#recipe-view").append(
+    
+        //card title
+        "<div class='row'><div class='col s12 m6'><div class='card blue-grey darken-1'><div class='card-content white-text'><span class='card-title'>"
+    
+        //card body element
+        + "<img>" + recipeURL + "</img>"
+
+        + response[0].title
+
+        + recipeCount)
+
+        } // end of for loop 
+      
     }) // End of then response
-  }
+
+  } // End of store ingredients 
 
 }); // Final closing tag    
 

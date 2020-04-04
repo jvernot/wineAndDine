@@ -1,53 +1,75 @@
+// Initalizing JS
 $(document).ready(function() {
   console.log("ready!");
 
+  // Global variables
+  var recipeInput="";
+  var queryURL="";
 
+  //Initializing drop down function 
+  $('.dropdown-trigger').dropdown();
+ 
   // On-click when user enters in the ingredients they have on hand 
   $("#ingredient-input").on("click", function(event) {
-    event.preventDefault();
+  event.preventDefault();
+  console.log("you've clicked a button");
 
-    // Grabs the input from the ingredint input text
-    var recipeInput = $("#icon_prefix2").val();
-    console.log(recipeInput, "recipeInput");
+  // Grabs the input from the ingredint input text (get)
+  recipeInput = $("#icon_prefix2").val();
+  console.log(recipeInput, "recipeInput")
+  storeIngredients()
+  
+  }) //  End of Ingredient-input on click
 
-    // QueryURL to Spoonacular App 
-    var queryURL =  "https://api.spoonacular.com/recipes/findByIngredients?ingredients=" +
-    recipeInput + 
-    "&apiKey=32de3e49a74748bd9db408e1bee255d2"
+ // Function to give for local storage
+ function storeIngredients() {
+  
+  // QueryURL to Spoonacular App 
+  queryURL =  "https://api.spoonacular.com/recipes/findByIngredients?ingredients=" +
+  recipeInput + 
+  "&apiKey=32de3e49a74748bd9db408e1bee255d2"
+  console.log("inside on click function query URL", queryURL);
+  console.log("inside store ingredients");
 
-    //AJAX call 
-    $.ajax({
+  $.ajax({
     url: queryURL,
     method: "GET"
     }).then(function(response) {
         console.log(response[0].title);
-        console.log(response[0].image);
-        console.log(response[0].usedIngredients);
+        console.log(queryURL);
 
-          
-
-      // Function that accounts for how many recipes they want (input or dropdown)
-      $("#ingredient-amount").on("click", function(event) {
-        event.preventDefault();
-
-        //defining how many articles they want 
-        var amountInput = $("#icon_prefix2").val();
-        console.log(amountInput, "amountInput");
-      }) // ingredient amount end response 
-
+      //var recipeImage 
+      var recipeURL = "https://spoonacular.com/recipeImages/" + response[0].id + "-240x150." +  response[0].imageType;
+      console.log("recipe picture", recipeURL);
+        
         // Loop through and build elements for the defined number of recipes
-        //for (var i = 0; i < numRecipes; i++) {
-        // Get specific article info for current index
-         // var article = response[i];
+        for (var i = 0; i < response.length; i++) {
+        console.log("response before append", response);
 
-        // Increase the articleCount (track article # - starting at 1)
-        //var recipeCount = i + 1;
+        // Increase the recipeCount (track recipe # - starting at 1)
+        var recipeCount = i + 1;
 
-      // Prepending the image to the page 
-      $("#recipe-view").append(response[0].title);
-       
+        $("#recipe-view").append(
+    
+        //card title
+        "<div class='row'><div class='col s12 m6'><div class='card blue-grey darken-1'><div class='card-content white-text'><span class='card-title'>"
+    
+        //card body element
+        + "<img>" + recipeURL + "</img>"
+
+        + response[0].title
+
+        + recipeCount)
+
+        } // end of for loop 
+      
     }) // End of then response
-  }) //  End of Ingredient-input on click
-}); // Final closing tag
+
+  } // End of store ingredients 
+
+}); // Final closing tag    
+
+  
+
 
 

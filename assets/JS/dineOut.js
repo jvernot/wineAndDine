@@ -8,6 +8,14 @@ $(document).ready(function() {
 
     $('.dropdown-trigger').dropdown();
 
+    //Enter hits submit button
+    var input = document.getElementById("location");
+    input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("submit1").click();
+        }
+    });
 
     $("#submit1").on("click", function(event) {
         event.preventDefault();

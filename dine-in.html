@@ -32,38 +32,43 @@
 
             <!-- Enter Ingredients on hand -->
             <div class="input-field col s3" id='ingredients-had'>
-              <p class = "center" style = "font-size: 20px;">Enter the ingredients you have on hand!</p>
+              <p>Enter the ingredients you have on hand!</p>
               <i class="material-icons prefix"></i>
-              <p class = center>
-              <input class = "center" id="icon_prefix2" style = "width:50%" placeholder="ex: chicken, broccoli, soy sauce" class="materialize-textarea">
-              <br>
-              <br>
+              <input id="icon_prefix2" placeholder="ex: chicken, broccoli, soy sauce" class="materialize-textarea">
               <a id="ingredient-input" class="waves-effect waves-light btn">submit</a>
               <label for="icon_prefix2"></label>
-              </p>
-              
             </div>
 
-            <br>
-
-            <!-- Select how many ingredients you'd like to see-->           
-            <div class="col s3">
-              <p class = "center" style = "font-size: 20px;">How many recipes would you like to see?</p>
-              <br>
       
-              <p class = "center">
+            <!-- Select how many ingredients you'd like to see-->
             <!-- Dropdown trigger-->
-            <a class='dropdown-trigger btn' href='#' data-target='dropdown4'>Drop Me!</a>
-            
+            <div class="col s3">
+              <p>How many recipes would you like to see?</p>
+              <br>
+              <a  id="recipe-count" class="dropdown-button btn" href="#" data-activates="dropdown2">Dropdown
+                <i class="material-icons right">arrow_drop_down</i>
+              </a>
+
             <!-- Dropdown Structure -->
-            <ul id='dropdown4' class='dropdown-content'>
-              <li><a href="#!">one</a></li>
-              <li><a href="#!">five</a></li>
-              <li><a href="#!">ten</a></li>
-            </ul>
-            </p>
-         </div>
-      </div>
+              <div id="dropdown1" class="dropdown-content">
+                <a id="1" href="#">one</a>
+                <a id="2" href="#">five</a>
+                <a id="3" href="#">ten</a>
+              </div>
+            </div>
+
+             <!-- Recipe Details -->
+            <br>
+            <div id="recipe-view"></div>
+
+          </div>
+        </div>
+
+        <!-- <Main Page Button> -->
+        <div class="card-action">
+          <a href="index.html">Main Page</a>
+        </div>
+
     </div>
   <br>
     

@@ -4,65 +4,95 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wine And Dine - Dine Out</title>
+    <title>Dine In</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link href="./assets/CSS/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel = 'stylesheet' href="./assets/CSS/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <header>
-    <a align="right" class="waves-effect waves-light btn"  href='index.html'>Start Over</a>
-    <h1>Dine In!</h1> 
-  </header>
+<body style = "background-color:#ffe0b2">
+ 
+  <main>
 
-<main>
-<div class="row">
-  <form class="col s12">
-    <div class="row">
+    <div class="col s12 m7">
+      <h2 class="header" style = "font-family: 'Indie Flower', cursive; font-size: 70px; color: white;">Dine In</h2>
+      <p style="text-align:center; font-size: 20px; padding-left:250px; padding-right:250px">
+        Have ingredients in your kitchen, but not sure what to make? Simply enter a few main ingredients you have and we'll give you our yummiest suggestions!</p>
+      <div class="card medium horizontal">
+        <div class="card-image">
+          <img src="https://i.pinimg.com/originals/04/be/a2/04bea21f801fca023d16fbb29b5f2a70.jpg" alt = "kitchen">
+        </div>
+
+        
+        <div class="card-stacked">
+          <div class="card-content">
+
+            <!-- Enter Ingredients on hand -->
+            <div class="input-field col s3" id='ingredients-had'>
+              <p>Enter the ingredients you have on hand!</p>
+              <i class="material-icons prefix"></i>
+              <input id="icon_prefix2" placeholder="ex: chicken, broccoli, soy sauce" class="materialize-textarea">
+              <a id="ingredient-input" class="waves-effect waves-light btn">submit</a>
+              <label for="icon_prefix2"></label>
+            </div>
+
       
-      <div class="input-field col s3" id = 'ingredients-had'>
-        <p>Enter the ingredients you have on hand!</p>
-        <i class="material-icons prefix"></i>
-        <input id="icon_prefix2" class="materialize-textarea">
-        <a id="ingredient-input" class="waves-effect waves-light btn">submit</a>
-        <label for="icon_prefix2"></label>
-      </div>
+            <!-- Select how many ingredients you'd like to see-->
+            <!-- Dropdown trigger-->
+            <div class="col s3">
+              <p>How many recipes would you like to see?</p>
+              <!-- <br>
+              <a  id="recipeCount" class="dropdown-trigger btn" href="#" data-target='dropdown1' data-activates="dropdown2">Dropdown
+                <i class="material-icons right">arrow_drop_down</i>
+              </a> -->
+
+           <!-- Dropdown Structure --> 
+              <!-- <div id="dropdown1" class="dropdown-content">
+                <a value="1" href="#">one</a>
+                <a value="5" selected href="#">five</a>
+                <a value="10" href="#">ten</a>
+              </div>
+            </div> -->
+
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown1'>Drop Me!</a>
+            
+            <ul id='dropdown1' class='dropdown-content'>
+              <li><a href="#!">one</a></li>
+              <li><a href="#!">two</a></li>
+              <li class="divider" tabindex="-1"></li>
+              <li><a href="#!">three</a></li>
+              <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+              <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+            </ul>
+
+             <!-- Recipe Details -->
+            <br>
+            <div id="recipe-view"></div>
+
+          </div>
+        </div>
+
+        <!-- <Main Page Button> -->
+        <div class="card-action">
+          <a href="index.html">Main Page</a>
+        </div>
 
     </div>
 
-  </form>
+   
 
-  <div class="input-field col s3">
-    <p>How many recipes would you like to see? Select up to 10!</p>
-    <i class="material-icons prefix"></i>
-    <input type="number" id="quantity" name="quantity" min="1" max="10">
-    <a id="ingredient-amount"class="waves-effect waves-light btn">submit</a>
-    <label for="icon_prefix2"></label>
-  </div>
-</div>
+  </main>
 
-
-<div id="recipe-view">
-</div>
-
-
-
-
-</main>
-</body>
-
-</html>
-
-    <!-- jQuery JS -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- jQuery JS -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   
-      <!-- Code to the JavaScript File -->
-      <script src="assets/JS/materialize.min.js"></script>
-      <script src="assets/JS/dine-in.js"></script>
-  </body>
-  </html>
+  <!-- Code to the JavaScript File -->
+  <script src="assets/JS/materialize.min.js"></script>
+  <script src="assets/JS/dine-in.js"></script>
 
+</body>
+</html>

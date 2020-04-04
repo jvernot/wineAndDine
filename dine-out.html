@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wine And Dine - Dine Out</title>
+    <title>Dine Out</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link href="./assets/CSS/materialize.min.css">
@@ -14,7 +14,7 @@
 </head>
 
 <body style = "background-color: #c8e6c9;">
-  <header style = "font-family: 'Dancing Script', cursive; font-size: 70px;">
+  <header>
    Dine Out!
   </header>
   <main>
@@ -50,18 +50,18 @@
       </div>
     </div>
 
-     <div class="row">
-        <div id="cuisineDrop" class = "hide">
-          <!-- Dropdown Trigger -->
-          <p class = "center">
-          <a id="cuisineBtn" class='dropdown-trigger btn' href='#' data-target='dropdown2'>Choose your type of cuisine</a>
-          </p>
-          <!-- Dropdown Structure -->
-          <ul id='dropdown2' class='dropdown-content'>
-            <li class="divider" tabindex="-1"></li>
-          </ul>
-        </div>
-     </div>
+    <div class="row">
+      <div id="cuisineDrop" class = "hide">
+        <!-- Dropdown Trigger -->
+        <p class = "center">
+        <a id="cuisineBtn" class='dropdown-trigger btn' href='#' data-target='dropdown2'>Choose your type of cuisine</a>
+        </p>
+        <!-- Dropdown Structure -->
+        <ul id='dropdown2' class='dropdown-content'>
+          <li class="divider" tabindex="-1"></li>
+        </ul>
+      </div>
+    </div>
   
     <div class="row">
       <div class="input-field col s12 hide" id = "radiusQuestion">
@@ -69,28 +69,23 @@
         <i class="material-icons prefix"></i>
         <input class = "center" style = "width:30%" type="number" id="quantity" name="quantity" min="1" max="25">
         <p class="center">
-        <a id="radiusSubmit" class="waves-effect waves-light btn">submit</a>
+          <a id="radiusSubmit" class="waves-effect waves-light btn">submit</a>
         </p>
         <label for="icon_prefix2"></label>
       </div>
-    </div>
-
-  <br><br>
-
-  <div id="restaurantResults">
     
-  </div>
+    <br><br>
 
-  <p class = "right">
-    <a class="waves-effect waves-light btn" href='index.html'><i class="material-icons">undo</i>Start Over</a>
-  </p>
   </div>
+  <div id="restaurantResults"></div>
+    
+  <footer>
+    <p class = "right">
+      <a class="waves-effect waves-light btn" href='index.html'><i class="material-icons">undo</i>Main Page</a>
+    </p>
+
+  </footer>
   
-
-
-
-
-
   <!-- jQuery JS -->
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

@@ -4,65 +4,57 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wine And Dine - Dine Out</title>
+    <title>Wine And Dine - Dine In</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link href="./assets/CSS/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel = 'stylesheet' href="./assets/CSS/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <header>
-    <a align="right" class="waves-effect waves-light btn"  href='index.html'>Start Over</a>
-    <h1>Dine In!</h1> 
-  </header>
-
-<main>
-<div class="row">
-  <form class="col s12">
-    <div class="row">
-      
-      <div class="input-field col s3" id = 'ingredients-had'>
-        <p>Enter the ingredients you have on hand!</p>
-        <i class="material-icons prefix"></i>
-        <input id="icon_prefix2" class="materialize-textarea">
-        <a id="ingredient-input" class="waves-effect waves-light btn">submit</a>
-        <label for="icon_prefix2"></label>
+<body style = "background-color:#ffe0b2">
+ 
+  <main>
+    <div class="col s12 m7">
+      <h2 class="header" style = "font-family: 'Indie Flower', cursive; font-size: 70px; color: white;">Dine In</h2>
+      <div class="card medium horizontal">
+        <div class="card-image">
+          <img src="https://i.pinimg.com/originals/04/be/a2/04bea21f801fca023d16fbb29b5f2a70.jpg" alt = "kitchen">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <div class="input-field col s3" id = 'ingredients-had'>
+              <p class = >Enter the ingredients you have on hand!</p>
+              <i class="material-icons prefix"></i>
+              <input id="icon_prefix2" class="materialize-textarea">
+              <a id="ingredient-input" class="waves-effect waves-light btn">submit</a>
+              <label for="icon_prefix2"></label>
+            <div class="input-field col s3">
+              <p>How many recipes would you like to see? Select up to 10!</p>
+              <i class="material-icons prefix"></i>
+              <input type="number" id="quantity" name="quantity" min="1" max="10">
+              <a id="ingredient-amount"class="waves-effect waves-light btn">submit</a>
+              <label for="icon_prefix2"></label>
+            </div>
+          </div>
+        </div>
       </div>
-
+      <div class="card-action">
+        <a href="index.html">Start Over</a>
+      </div>
     </div>
 
-  </form>
-
-  <div class="input-field col s3">
-    <p>How many recipes would you like to see? Select up to 10!</p>
-    <i class="material-icons prefix"></i>
-    <input type="number" id="quantity" name="quantity" min="1" max="10">
-    <a id="ingredient-amount"class="waves-effect waves-light btn">submit</a>
-    <label for="icon_prefix2"></label>
-  </div>
-</div>
-
-
-<div id="recipe-view">
-</div>
-
-
-
+    <div id="recipe-view"></div>
 
 </main>
+
+  <!-- jQuery JS -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- Code to the JavaScript File -->
+  <script src="assets/JS/materialize.min.js"></script>
+  <script src="assets/JS/dine-in.js"></script>
 </body>
-
 </html>
-
-    <!-- jQuery JS -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  
-      <!-- Code to the JavaScript File -->
-      <script src="assets/JS/materialize.min.js"></script>
-      <script src="assets/JS/dine-in.js"></script>
-  </body>
-  </html>
 

@@ -1,68 +1,49 @@
+/* font for the entire site  */
 * {   
     font-family: 'Raleway', sans-serif;
 }
 
+/* header for every page */
 header {
     text-align: center;
     font-size: 62px;
     color: white;
 }
 
-#choice {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-    background-color: #8bc590;
-    text-align: center;
-    font-size: 36px;
-    border-radius: 25px;
-}
-
+/* body on the index document */
 body {
-    background-color: #90caf9 ;
+    background-color:#ff8a65 ;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     margin: 0;
 }
 
+/* all buttons on dine in/dine out pages */
 .btn {
     background-color: navy;
 }
 
-.btn-floating {
-    background-color: navy;
-}
-
+/* drop-down text */
 .dropdown-content li > a {
     color:navy!important;
 }
 
-#cuisineList {
-    margin: 30px;
-}
-
-#heading {
-    color:black;
-    background-color: #e8f5e9;
-    padding: 30px;
-
-}
-
 #restaurant-location {
-    text-align: center;
+    font-size: 24px;
 }
  
-#radius {
-    text-align: center;
-}
-
 .card-title {
     font-size: 40px;
 }
 
 main {
     flex: 1 0 auto;
+}
+
+.footer-copyright{
+    padding: 1rem; 
+    margin-top: 2rem;
 }
 
 

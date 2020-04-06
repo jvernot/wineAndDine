@@ -41,6 +41,27 @@ body {
 
 }
 
+h2 {
+    text-align: center;
+    font-size: 20px !important;
+    font-weight: bold;
+    color: black;
+    padding-bottom: 35px;
+    padding-top: 25px;
+    margin: 0;
+}
+
+hr {
+    display: block; 
+    overflow: hidden; 
+    border-style: inset; 
+    background-color: transparent;
+    color: navy;
+    border-style: solid;
+    border-bottom-width: 2px;
+    margin-bottom: 50px;
+}
+
 #restaurant-location {
     text-align: center;
 }

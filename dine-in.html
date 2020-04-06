@@ -17,63 +17,55 @@
  
 <main>
 
+  <div class="container">
     <div class="col s12 m7">
-      <h2 class="header center" style = "color: white;">Dine In</h2>
-      <p style="text-align:center; font-size: 20px; padding-left:250px; padding-right:250px">
+      <h2 class= "center">Dine In</h2>
+        <p class = "dineInText">
         Have ingredients in your kitchen, but not sure what to make? Simply enter a few main ingredients you have and we'll give you our yummiest suggestions!</p>
-      <div class="card medium horizontal">
-        <div class="card-image">
-          <img src="https://i.pinimg.com/originals/04/be/a2/04bea21f801fca023d16fbb29b5f2a70.jpg" alt = "kitchen">
-        </div>
+    <!-- card -->
+    <div class="card medium horizontal">
+      <div class="card-image">
+        <img src="https://i.pinimg.com/originals/04/be/a2/04bea21f801fca023d16fbb29b5f2a70.jpg" alt = "kitchen">
+      </div>
+    <div class="card-stacked">
+    <div class="card-content">
+      <!-- Enter Ingredients on hand -->
+      <div class="input-field col s3" id='ingredients-had'>
+        <p class = "center">Enter the ingredients you have on hand!</p>
+          <i class="material-icons prefix"></i>
+          <input id="icon_prefix2" placeholder="ex: chicken, broccoli, soy sauce" class="materialize-textarea center">
+         <p class = "center">
+            <a id="ingredient-input" class="waves-effect waves-light btn">submit</a>
+          </p>
+          <label for="icon_prefix2"></label>
+      </div>
+      <br>
 
-        
-        <div class="card-stacked">
-          <div class="card-content">
+      <!-- Select how many ingredients you'd like to see-->
+      <!-- Dropdown trigger-->
+      <div class="col s3">
+        <p class = "center">How many recipes would you like to see?</p>
+          <br>
+       <p class="center"> 
+        <a  id="recipe-count" class="dropdown-button btn" href="#" data-activates="dropdown2">Select Number
+          <i class="material-icons right">arrow_drop_down</i>
+        </a>
+      </p>
 
-            <!-- Enter Ingredients on hand -->
-            <div class="input-field col s3" id='ingredients-had'>
-              <p>Enter the ingredients you have on hand!</p>
-              <i class="material-icons prefix"></i>
-              <input id="icon_prefix2" placeholder="ex: chicken, broccoli, soy sauce" class="materialize-textarea">
-              <a id="ingredient-input" class="waves-effect waves-light btn">submit</a>
-              <label for="icon_prefix2"></label>
-            </div>
-
-      
-            <!-- Select how many ingredients you'd like to see-->
-            <!-- Dropdown trigger-->
-            <div class="col s3">
-              <p>How many recipes would you like to see?</p>
-              <br>
-              <a  id="recipe-count" class="dropdown-button btn" href="#" data-activates="dropdown2">Dropdown
-                <i class="material-icons right">arrow_drop_down</i>
-              </a>
-
-            <!-- Dropdown Structure -->
-              <div id="dropdown1" class="dropdown-content">
-                <a id="1" href="#">one</a>
-                <a id="2" href="#">five</a>
-                <a id="3" href="#">ten</a>
-              </div>
-            </div>
-
-             <!-- Recipe Details -->
-            <br>
-            <div id="recipe-view"></div>
-
+          <!-- Dropdown Structure -->
+          <div id="dropdown1" class="dropdown-content">
+            <a id="1" href="#">one</a>
+            <a id="2" href="#">five</a>
+            <a id="3" href="#">ten</a>
           </div>
         </div>
-
-        <!-- <Main Page Button> -->
-        <div class="card-action">
-          <a href="index.html">Main Page</a>
-        </div>
-
-    </div>
-  <br>
+      </div>   
+    </div>                                    
+  </div>   
+</div>   
+</div>
     
-
-<div id="recipe-view"></div>
+<div id="recipe-view">whats up</div>
 </main>
 
 <footer>

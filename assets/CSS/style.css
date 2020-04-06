@@ -19,6 +19,12 @@ body {
     margin: 0;
 }
 
+.dineInText {
+    text-align:center; 
+    font-size: 20px; 
+    padding-left:250px; 
+    padding-right:250px;
+}
 /* all buttons on dine in/dine out pages */
 .btn {
     background-color: navy;

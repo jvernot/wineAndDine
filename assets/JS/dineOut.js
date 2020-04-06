@@ -8,12 +8,20 @@ $(document).ready(function() {
 
     $('.dropdown-trigger').dropdown();
 
-    //Enter hits submit button
+    //Enter hits first submit button
     var input = document.getElementById("location");
     input.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
     event.preventDefault();
     document.getElementById("submit1").click();
+        }
+    });
+    //Enter hits second submit button
+    var input = document.getElementById("quantity");
+    input.addEventListener("keyup", function(event) {
+    if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("radiusSubmit").click();
         }
     });
 

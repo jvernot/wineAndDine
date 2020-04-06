@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wine And Dine - Dine Out</title>
+    <title>Dine Out</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link href="./assets/CSS/materialize.min.css">
@@ -13,19 +12,20 @@
     <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
 </head>
 
-<body style = "background-color: #c8e6c9;">
-  <header style = "font-family: 'Dancing Script', cursive; font-size: 70px;">
+<body class = "green lighten-4">
+  <header>
    Dine Out!
   </header>
-  <main>
-   <div class="container">
+
+  <main class="container">
+    <!-- card -->
     <div class="card medium">
       <div class="card-image">
         <img class="responsive-img" src="https://cdn.asiatatler.com/asiatatler/i/hk/2019/11/11160001-fb-rest-images-5000x33007_cover_2000x1320.jpg" alt = "restaurant table">
         <span class="card-title"></span>
       </div>
       <div class="card-content">
-        <p id = "restaurant-location" style = "font-size: 24px;">Where are you looking for restaurants?</p>
+        <p id = "restaurant-location" class = "center">Where are you looking for restaurants?</p>
         <div class="input-field">
           <input id="location" type="text" class="validate">
           <label class = "center" for="city">Your City Here</label>
@@ -33,13 +33,15 @@
       </div> 
     </div>
     
+    <!-- submit button -->
     <p class="center">
       <btn type= "submit" id="submit1" class="waves-effect waves-light btn">submit</btn>
     </p>
   
+    <!-- location drop-down -->
     <div class="row">
       <div id="locationDrop" class = "hide">
-        <!-- Dropdown Trigger -->
+        <!-- dropdown Trigger -->
         <p class = "center">
         <a id="locationBtn" class='dropdown-trigger btn' href='#' data-target='dropdown1'>Choose your city</a>
         </p>
@@ -50,54 +52,49 @@
       </div>
     </div>
 
-     <div class="row">
-        <div id="cuisineDrop" class = "hide">
-          <!-- Dropdown Trigger -->
-          <p class = "center">
+    <!-- cuisine drop-down -->
+    <div class="row">
+      <div id="cuisineDrop" class = "hide">
+        <!-- dropdown Trigger -->
+        <p class = "center">
           <a id="cuisineBtn" class='dropdown-trigger btn' href='#' data-target='dropdown2'>Choose your type of cuisine</a>
-          </p>
-          <!-- Dropdown Structure -->
-          <ul id='dropdown2' class='dropdown-content'>
-            <li class="divider" tabindex="-1"></li>
-          </ul>
-        </div>
-     </div>
+        </p>
+        <!-- dropdown Structure -->
+        <ul id='dropdown2' class='dropdown-content'>
+          <li class="divider" tabindex="-1"></li>
+        </ul>
+      </div>
+    </div>
   
+    <!-- radius -->
     <div class="row">
       <div class="input-field col s12 hide" id = "radiusQuestion">
-        <p id = "radius"> Distance From You (Mi.)</p>
-        <i class="material-icons prefix"></i>
-        <input class = "center" style = "width:30%" type="number" id="quantity" name="quantity" min="1" max="25">
-        <p class="center">
-        <a id="radiusSubmit" class="waves-effect waves-light btn">submit</a>
+        <p id = "radius" class = "center"> Distance From You (Mi.)
+        <input class = "center" style = "width:10%" type="number" id="quantity" name="quantity" min="1" max="25">
         </p>
-        <label for="icon_prefix2"></label>
+        <!-- submit button -->
+        <p class="center">
+          <a id="radiusSubmit" class="waves-effect waves-light btn">submit</a>
+        </p>
       </div>
     </div>
 
-  <br><br>
+  </div>
 
-  <div id="restaurantResults">
+  <div class="row" id="restaurantResults"></div>
     
-  </div>
-
-  <p class = "right">
-    <a class="waves-effect waves-light btn" href='index.html'><i class="material-icons">undo</i>Start Over</a>
-  </p>
-  </div>
+  <footer>
+    <!-- main page button -->
+    <p class = "right">
+      <a class="waves-effect waves-light btn" href='index.html'><i class="material-icons">undo</i>Main Page</a>
+    </p>
+  </footer>
   
-
-
-
-
-
   <!-- jQuery JS -->
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
  <!-- Code to the JavaScript File -->
   <script src="./assets/JS/materialize.min.js"></script>
   <script src="./assets/JS/dineOut.js"></script>
-
-  </main>
 </body>
 </html>

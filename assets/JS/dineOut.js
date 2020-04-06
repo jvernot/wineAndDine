@@ -162,7 +162,7 @@ $(document).ready(function() {
             for (var i = 0; i < restaurantArray.length; i++) {
                 $("#restaurantResults").append(
     
-                "<div class='row'><div class='col s12 m6'><div class='card blue-grey darken-1'><div class='card-content white-text'><span class='card-title'>"
+                "<div class='col s12 m6'><div class='card blue-grey darken-1'><div class='card-content white-text'><span class='card-title'>"
                 //card title
                 + response.restaurants[i].restaurant.name + " | " + response.restaurants[i].restaurant.location.locality 
                 //card body elements
@@ -175,7 +175,7 @@ $(document).ready(function() {
                 + "<p>" + response.restaurants[i].restaurant.phone_numbers + "</p>"
                 //card link
                 + "</div><div class='card-action'><a target='_blank' href="
-                + response.restaurants[i].restaurant.url + ">Check out the restaurant page!</a></div></div></div></div>");
+                + response.restaurants[i].restaurant.url + ">Check out the restaurant page!</a></div></div></div>");
             }
     
         })

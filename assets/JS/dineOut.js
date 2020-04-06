@@ -38,6 +38,7 @@ $(document).ready(function() {
 
     $("#radiusSubmit").on("click", function(event) {
         event.preventDefault();
+        $("#restaurantResults").empty();
         restaurantSearch();
     })
 

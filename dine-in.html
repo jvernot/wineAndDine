@@ -11,66 +11,85 @@
     <link rel = 'stylesheet' href="./assets/CSS/style.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
+
 <body class = "orange lighten-4">
-<main>
-    <div class="col s12 m7">
-      <header>
-        Dine In!
-       </header>      
-       <div class="card large horizontal">
-        <div class="card-image">
-          <img src="https://i.pinimg.com/originals/04/be/a2/04bea21f801fca023d16fbb29b5f2a70.jpg" alt = "kitchen">
-        </div>
-        <div class="card-stacked">
-          <div class="card-content">
-            <!-- Explanation -->
-            <h2>Have ingredients in your kitchen, but not sure what to make? Simply enter a few ingredients you have and we'll give you our yummiest suggestions!</p>
-            </h2><hr>
-            <!-- Enter Ingredients on hand -->
-            <div class="input-field col s3" id='ingredients-had'>
-              <p class = "center">Enter the ingredients you have on hand!</p>
-              <i class="material-icons prefix"></i>
-              <p class="center">
-              <input class = "center" id="icon_prefix2" style = "width:30%" placeholder="ex: chicken, broccoli, soy sauce" class="materialize-textarea">
-              </p>
-            </div>
-            <!-- Select how many recipies you'd like to see-->
-            <div class="col s3">
-              <p class = "center">How many recipes would you like to see?</p>
-              <br>
-            <!-- Dropdown trigger-->
-            <p class="center">
-            <a class='dropdown-trigger btn' href='#' data-target='dropdown4'>Select</a>
-            </p>
-            <!-- Dropdown Structure -->
-            <ul id='dropdown4' class='dropdown-content'>
-              <li><a class="recipeOption" id="1" href="#!">one</a></li>
-              <li><a class="recipeOption" id="5" href="#!">five</a></li>
-              <li><a class="recipeOption" id="10" href="#!">ten</a></li>
-            </ul>
-            <br>
-            <br>
-            <!-- Submit button -->
-            <div class="col s3">
-              <p class="center">
-              <a id="ingredient-input" class="waves-effect waves-light btn">show me recipes</a>
-              <label for="icon_prefix2"></label>
-              </p>
-            </div>  
-          </div>
-        </div>
-      </div>
+  <div class="col s12 m7">
+    <header>
+      Dine In!
+    </header>  
+
+  <!-- container -->  
+  <main class="container">           
+    <div class="card large horizontal">
+     <div class="card-image">
+       <img src="https://i.pinimg.com/originals/04/be/a2/04bea21f801fca023d16fbb29b5f2a70.jpg" alt = "kitchen">
+     </div> <!-- end of card image-->
+
+     <div class="card-stacked">
+         <div class="card-content">
+ 
+           <!-- Explanation -->
+           <h2>Have ingredients in your kitchen, but not sure what to make? Simply enter a few ingredients you have and we'll give you our yummiest suggestions!</p>
+           </h2><hr>
+ 
+           <!-- Enter Ingredients on hand -->
+           <div class="input-field col s3" id='ingredients-had'>
+             <p class = "center">Enter the ingredients you have on hand!</p>
+             <i class="material-icons prefix"></i>
+             <p class="center">
+             <input class = "center" id="icon_prefix2" style = "width:30%" placeholder="ex: chicken, tomato" class="materialize-textarea">
+             </p>
+           </div>
+ 
+           <!-- Select how many recipies you'd like to see-->
+           <div class="col s3">
+             <p class = "center">How many recipes would you like to see?</p>
+             <br>
+           
+           <!-- Dropdown trigger-->
+             <p class="center">
+             <a class='dropdown-trigger btn' href='#' data-target='dropdown4'>Select</a>
+             </p>
+ 
+           <!-- Dropdown Structure -->
+             <ul id='dropdown4' class='dropdown-content'>
+               <li><a class="recipeOption" id="1" href="#!">one</a></li>
+               <li><a class="recipeOption" id="5" href="#!">five</a></li>
+               <li><a class="recipeOption" id="10" href="#!">ten</a></li>
+             </ul>
+             <br>
+           </div> <!-- end of col s3-->
+ 
+       <!-- Submit button -->
+           <div class="col s3">
+             <p class="center">
+             <a id="ingredient-input" class="waves-effect waves-light btn">show me recipes</a>
+             <label for="icon_prefix2"></label>
+ 
+       <!-- Clear button -->
+             <a id="clear" class="waves-effect waves-light btn">clear recipes</a>
+             <label for="icon_prefix2"></label>
+             </p>
+           </div>  
+
+        </div> <!-- end of card content-->
+      </div> <!-- end of card stacked-->
+    </div> <!-- end of card large horizontal-->
+    <br>
+
+    <!-- Recipe Details -->
+    <div class = "row" id="recipe-view">
     </div>
-  <br>
-<!-- Recipe Details -->
-<br>
-<div id="recipe-view"></div>
-</main>
-<footer>
-  <p class = "right">
-    <a class="waves-effect waves-light btn" href='index.html'><i class="material-icons">undo</i>Main Page</a>
-  </p>   
-</footer>
+
+  </main> <!-- end of main container-->
+
+  <!-- Recipe Details -->
+  <footer>
+    <p class = "right">
+      <a class="waves-effect waves-light btn" href='index.html'><i class="material-icons">undo</i>Main Page</a>
+    </p>   
+  </footer>
+
   <!-- jQuery JS -->
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

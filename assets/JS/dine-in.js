@@ -28,6 +28,15 @@ $(document).ready(function() {
     recipeInput = $("#icon_prefix2").val();
     console.log(recipeInput, "recipeInput")
 
+
+  //On-click to clear recipes
+  $("#clear").on("click", clear);
+
+    // Function to empty out the recipes
+    function clear() {
+    $("#recipe-view").empty();
+}
+
     storeIngredients();
   }); // End of Ingredient-input on click
 
@@ -67,28 +76,49 @@ function storeIngredients() {
       method: "GET"
       }).then(function(response) {
 
-        // Establish a variable ot retreive the recipe link based on the previously grabbed ID 
+        // Establish a variable to retreive the recipe link based on the previously grabbed ID 
         response.forEach(async (res, index) => {
           if (index < numRecipes) {
           var link = await recipeLink(res.id);
           console.log(link, "link");
+          console.log(res.image, "resimage");
+        
+
           if (link) {
 
             // Append details to the site 
             $("#recipe-view").append(
-              "<div class='row'><div class='col s12 m6'><div class='card blue-grey darken-1'><div class='card-content white-text'><span class='card-title'>"
-              //card Title
-              + res.title
-              //card body elements
-              + "<img src=" + res.image + ">"
-              //card link
-              + "<p>Link to Recipe: " + link + "</p>"
-              ) // End of append 
+
+              //styling
+                 "<div class='col s12 m6'>"
+               + "<div class='card blue-grey darken-1'>"
+               
+
+                 //image
+                  + "<div class='card-image center'>" + "<img src=" + res.image + ">" + "</div>"
+
+                //card title
+                + "<div id='title' class='card-title center white-text flow-text'><strong>" + res.title + "</strong>"
+                    
+                //URL card body 
+                +  "<p class='flow-text' id='recipe'>" + 'RECIPE LINK: ' + "</p>"
+                +  "<p id='link' class='truncate'>" + link + "</p>"
+               
+              
+              // //close out card styling 
+              + "</div></div>"
+
+              ); // End of append 
+
           } // End of If Statement 
           } // End of If Statement 
+
         }) // End of response
+
    }) // End of ajax then response
+
  } // End of store ingredients function
+
 }); // Final closing tag    
 
   

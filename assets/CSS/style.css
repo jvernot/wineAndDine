@@ -1,39 +1,36 @@
+/* font for the entire site  */
 * {   
     font-family: 'Raleway', sans-serif;
 }
 
+/* header for every page */
 header {
     text-align: center;
     font-size: 62px;
     color: white;
 }
 
-#choice {
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-    background-color: #8bc590;
-    text-align: center;
-    font-size: 36px;
-    border-radius: 25px;
-}
-
+/* body on the index document */
+/* background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
 body {
-    /* background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); */
     display: flex;
     min-height: 100vh;
     flex-direction: column;
     margin: 0;
 }
 
+.dineInText {
+    text-align:center; 
+    font-size: 20px; 
+    padding-left:250px; 
+    padding-right:250px;
+}
+/* all buttons on dine in/dine out pages */
 .btn {
     background-color: navy;
 }
 
-.btn-floating {
-    background-color: navy;
-}
-
+/* drop-down text */
 .dropdown-content li > a {
     color:navy!important;
 }
@@ -49,14 +46,31 @@ body {
 
 }
 
-#restaurant-location {
+h2 {
     text-align: center;
-}
- 
-#radius {
-    text-align: center;
+    font-size: 20px !important;
+    font-weight: bold;
+    color: black;
+    padding-bottom: 35px;
+    padding-top: 25px;
+    margin: 0;
 }
 
+hr {
+    display: block; 
+    overflow: hidden; 
+    border-style: inset; 
+    background-color: transparent;
+    color: navy;
+    border-style: solid;
+    border-bottom-width: 2px;
+    margin-bottom: 50px;
+}
+
+#restaurant-location {
+    font-size: 24px;
+}
+ 
 .card-title {
     font-size: 40px;
 }

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,83 +11,71 @@
     <link rel = 'stylesheet' href="./assets/CSS/style.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
-
-<body style = "background-color:#ffe0b2">
- 
+<body class = "orange lighten-4">
 <main>
-
     <div class="col s12 m7">
-      <h2 class="header center" style = "color: white;">Dine In</h2>
-      <p style="text-align:center; font-size: 20px; padding-left:250px; padding-right:250px">
-        Have ingredients in your kitchen, but not sure what to make? Simply enter a few main ingredients you have and we'll give you our yummiest suggestions!</p>
-      <div class="card medium horizontal">
+      <header>
+        Dine In!
+       </header>      
+       <div class="card large horizontal">
         <div class="card-image">
           <img src="https://i.pinimg.com/originals/04/be/a2/04bea21f801fca023d16fbb29b5f2a70.jpg" alt = "kitchen">
         </div>
-
-        
         <div class="card-stacked">
           <div class="card-content">
-
+            <!-- Explanation -->
+            <h2>Have ingredients in your kitchen, but not sure what to make? Simply enter a few ingredients you have and we'll give you our yummiest suggestions!</p>
+            </h2><hr>
             <!-- Enter Ingredients on hand -->
             <div class="input-field col s3" id='ingredients-had'>
-              <p>Enter the ingredients you have on hand!</p>
+              <p class = "center">Enter the ingredients you have on hand!</p>
               <i class="material-icons prefix"></i>
-              <input id="icon_prefix2" placeholder="ex: chicken, broccoli, soy sauce" class="materialize-textarea">
-              <a id="ingredient-input" class="waves-effect waves-light btn">submit</a>
-              <label for="icon_prefix2"></label>
+              <p class="center">
+              <input class = "center" id="icon_prefix2" style = "width:30%" placeholder="ex: chicken, broccoli, soy sauce" class="materialize-textarea">
+              </p>
             </div>
-
-      
-            <!-- Select how many ingredients you'd like to see-->
-            <!-- Dropdown trigger-->
+            <!-- Select how many recipies you'd like to see-->
             <div class="col s3">
-              <p>How many recipes would you like to see?</p>
+              <p class = "center">How many recipes would you like to see?</p>
               <br>
-              <a  id="recipe-count" class="dropdown-button btn" href="#" data-activates="dropdown2">Dropdown
-                <i class="material-icons right">arrow_drop_down</i>
-              </a>
-
+            <!-- Dropdown trigger-->
+            <p class="center">
+            <a class='dropdown-trigger btn' href='#' data-target='dropdown4'>Select</a>
+            </p>
             <!-- Dropdown Structure -->
-              <div id="dropdown1" class="dropdown-content">
-                <a id="1" href="#">one</a>
-                <a id="2" href="#">five</a>
-                <a id="3" href="#">ten</a>
-              </div>
-            </div>
-
-             <!-- Recipe Details -->
+            <ul id='dropdown4' class='dropdown-content'>
+              <li><a class="recipeOption" id="1" href="#!">one</a></li>
+              <li><a class="recipeOption" id="5" href="#!">five</a></li>
+              <li><a class="recipeOption" id="10" href="#!">ten</a></li>
+            </ul>
             <br>
-            <div id="recipe-view"></div>
-
+            <br>
+            <!-- Submit button -->
+            <div class="col s3">
+              <p class="center">
+              <a id="ingredient-input" class="waves-effect waves-light btn">show me recipes</a>
+              <label for="icon_prefix2"></label>
+              </p>
+            </div>  
           </div>
         </div>
-
-        <!-- <Main Page Button> -->
-        <div class="card-action">
-          <a href="index.html">Main Page</a>
-        </div>
-
+      </div>
     </div>
   <br>
-    
-
+<!-- Recipe Details -->
+<br>
 <div id="recipe-view"></div>
 </main>
-
 <footer>
   <p class = "right">
     <a class="waves-effect waves-light btn" href='index.html'><i class="material-icons">undo</i>Main Page</a>
   </p>   
 </footer>
-
   <!-- jQuery JS -->
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  
   <!-- Code to the JavaScript File -->
   <script src="assets/JS/materialize.min.js"></script>
   <script src="assets/JS/dine-in.js"></script>
-
 </body>
 </html>

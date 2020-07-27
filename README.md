@@ -2,7 +2,7 @@
 
 Overview: We’ve all been there before. You’re hungry, but you don’t quite know what you want to eat. Should you use what you have in your fridge, or is there something close by you can pick up? With “What’s for Dinner” you can quickly navigate between the two options and see what’s at your fingertips before you start to get hangry. 
 
-User Story: Users can decide if they want to eat out or make dinner at home. If they want to eat out, the app gives them options of nearby restaurants based on what city city they search and what type of cuisine they are interested in. If the user wants to cook dinner, they can enter ingredients they already have at home. The app will generate recipes they can make using these ingredients.
+User Story: Users can decide if they want to eat out or make dinner at home. If they want to eat out, the app gives them options of nearby restaurants based on what city they search and what type of cuisine they are interested in. If the user wants to cook dinner, they can enter ingredients they already have at home. The app will generate recipes they can make using these ingredients.
 
 Technologies Used: HTML5, CSS3, Materialize, JavaScript, jQuery, Spoonacular API, Zomato API
 
